@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buy UC - PUBG Mobile</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #1e1e2f, #121212);
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .buy-container {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(8px);
+      padding: 30px 40px;
+      border-radius: 20px;
+      width: 100%;
+      max-width: 450px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+
+    .buy-container h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #f9a825;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      outline: none;
+      font-size: 15px;
+    }
+
+    input::placeholder {
+      color: #ccc;
+    }
+
+    select option {
+      background-color: #1e1e2f;
+      color: #fff;
+    }
+
+    .uc-packages {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .uc-box {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px;
+      text-align: center;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .uc-box:hover, .uc-box.active {
+      background: #f9a825;
+      color: #000;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #f9a825;
+      border: none;
+      border-radius: 10px;
+      color: #000;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #ffd54f;
+    }
+
+    .note {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="buy-container">
+    <h1>Buy PUBG UC</h1>
+
+    <form id="buyForm">
+      <label for="playerID">Player ID</label>
+      <input type="text" id="playerID" placeholder="Enter your Player ID" required>
+
+      <label for="server">Select Server</label>
+      <select id="server" required>
+        <option value="">Choose your server</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="North America">North America</option>
+        <option value="Middle East">Middle East</option>
+      </select>
+
+      <label>Select UC Package</label>
+      <div class="uc-packages">
+        
+        <div class="uc-box">325 UC<br>₹699</div>
+        <div class="uc-box">660 UC<br>₹999</div>
+        <div class="uc-box">1800 UC<br>₹2499</div>
+        <div class="uc-box">3850 UC<br>₹4999</div>
+      </div>
+
+      <button type="submit">Purchase</button>
+
+      <p class="note">Your UC will be delivered within 5–10 minutes after payment.</p>
+    </form>
+  </div>
+
+  <script>
+    // UC Selection Logic
+    const ucBoxes = document.querySelectorAll('.uc-box');
+    ucBoxes.forEach(box => {
+      box.addEventListener('click', () => {
+        ucBoxes.forEach(b => b.classList.remove('active'));
+        box.classList.add('active');
+      });
+    });
+
+    // Form Submission
+    document.getElementById('buyForm').addEventListener('submit', e => {
+      e.preventDefault();
+      const playerID = document.getElementById('playerID').value;
+      const server = document.getElementById('server').value;
+      const selectedUC = document.querySelector('.uc-box.active');
+      if (!selectedUC) {
+        alert('Please select a UC package.');
+        return;
+      }
+
+      alert(`✅ Purchase Details:
+Player ID: ${playerID}
+Server: ${server}
+Package: ${selectedUC.innerText}`);
+    });
+  </script>
+
+</body>
+</html>

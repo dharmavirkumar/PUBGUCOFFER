@@ -1,0 +1,96 @@
+/* ===== Offer Page ===== */
+.offer-hero {
+  background: url('https://i.imgur.com/QqE3qY5.jpg') center/cover no-repeat;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.offer-hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+}
+
+.offer-hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.offer-hero-content h1 {
+  font-size: 2.8rem;
+  color: #f8c210;
+  margin-bottom: 1rem;
+}
+
+.offer-hero-content p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+/* ===== Offers Grid ===== */
+.offer-grid {
+  text-align: center;
+  padding: 5rem 5%;
+  background: #0d0d0d;
+}
+
+.offer-grid h2 {
+  color: #f8c210;
+  margin-bottom: 3rem;
+  font-size: 2.2rem;
+}
+
+.offers-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.offer-card {
+  background: #1a1a1a;
+  border-radius: 15px;
+  padding: 2rem;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255,255,255,0.05);
+}
+
+.offer-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 18px rgba(255,255,255,0.1);
+}
+
+.offer-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.offer-card h3 {
+  color: #00d8ff;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+
+.bonus {
+  display: block;
+  font-size: 0.9rem;
+  color: #f8c210;
+  margin-top: 4px;
+}
+
+.active {
+  color: #f8c210;
+  border-bottom: 2px solid #f8c210;
+}
