@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BGMI UC Purchase</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #0d1117, #000);
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      color: #ffcc00;
+    }
+
+    .offer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px 0;
+      gap: 20px;
+    }
+
+    .offer-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      width: 200px;
+      padding: 20px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .offer-card:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .offer-card h3 {
+      color: #ffcc00;
+    }
+
+    .offer-card p {
+      font-size: 1.2rem;
+    }
+
+    .payment-section {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    }
+
+    .payment-section img {
+      width: 220px;
+      border-radius: 10px;
+      margin: 15px 0;
+    }
+
+    .payment-section input {
+      width: 80%;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      margin: 10px 0;
+      font-size: 1rem;
+    }
+
+    .pay-btn {
+      background-color: #ffcc00;
+      color: #000;
+      font-weight: bold;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    .pay-btn:hover {
+      background-color: #ffaa00;
+    }
+
+    footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    @media (max-width: 600px) {
+      .offer-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  
+
+  <section class="payment-section">
+    <h2>Pay Using UPI</h2>
+    <p>Scan the QR code below to make your payment</p>
+    <img src="/scanner.jpeg" alt="UPI QR Code">
+
+    <p><strong>UPI ID:</strong> dharmavirkumar1215@oksbi</p>
+
+    
+
+  <footer>
+    <p>© 2025 BGMI UC Store | Designed by Dharmavir Singh</p>
+  </footer>
+
+</body>
+</html>

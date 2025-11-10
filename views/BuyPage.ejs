@@ -139,14 +139,14 @@
         <div class="uc-box">3850 UC<br>₹4999</div>
       </div>
 
-      <button type="submit">Purchase</button>
+      <button type="button"><a href="/Payment"> <b>Purchase</b></a></button>
 
       <p class="note">Your UC will be delivered within 5–10 minutes after payment.</p>
     </form>
   </div>
 
   <script>
-    // UC Selection Logic
+     // UC Selection Logic
     const ucBoxes = document.querySelectorAll('.uc-box');
     ucBoxes.forEach(box => {
       box.addEventListener('click', () => {
@@ -171,7 +171,7 @@ Player ID: ${playerID}
 Server: ${server}
 Package: ${selectedUC.innerText}`);
     });
-  </script>
+  </script> 
 
 </body>
 </html>
